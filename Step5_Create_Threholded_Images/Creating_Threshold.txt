@@ -1,0 +1,28 @@
+macro "CreatingThreshold"{
+
+dir = getDirectory("");
+list = getFileList(dir);
+for (i=0; i <list.length;i++){
+    if (endsWith(list[i], ".zip"))
+       {roiName =list[i];}
+}
+
+
+roiManager("Open", dir+roiName);
+for (i=0; i <list.length;i++){
+    if (endsWith(list[i], ".tif"))
+       {
+        open(dir+list[i]);
+        run("8-bit");
+        roiManager("Select", i);
+        run("Threshold...");       
+        setAutoThreshold("Default");
+        setOption("BlackBackground", true);
+        run("Convert to Mask");
+        resetThreshold();
+        dir1 = getDirectory("image");
+        name = getInfo("image.filename");
+        saveAs("tiff", dir1+"Default/"+name);
+        }
+}
+}
