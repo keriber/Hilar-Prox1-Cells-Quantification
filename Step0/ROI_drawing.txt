@@ -1,0 +1,9 @@
+ROI drawing
+
+The granule cell layer was drawn with photoshop with the magic wand tool (tolerance 32 contigious) and the quick selection tool(size 12 and Auto enhance). Then it was saved into an alpha channel called "GCL"
+
+The hilus wa drawn by inverting the selection of the "GCL" and usind the Polygonal lasso tool(intersection). Then it was saved as "H"
+
+The contracted hilus was made by contracting "H" by 22px and deselecting those cells that were in the edges using the quick selection tool 
+
+The subgranular zone was drawn by selecting "H" and substracting the "Hilus" using the magic wand tool and eliminatiing the connection between the upper and lower blade by using the polygonal lasso tool. The selction was then saved as "SGZ"
