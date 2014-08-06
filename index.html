@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Hilar-prox1-cells-quantification : These are a series of scripts in Javascript  for Photoshop, Python scripts and macros in ImageJ to estimate the number of immuno-reactive Prox1 cells in the hilus of the dentate gyrus of the hippocampus in mice">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Hilar-prox1-cells-quantification</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification">View on GitHub</a>
+
+          <h1 id="project_title">Hilar-prox1-cells-quantification</h1>
+          <h2 id="project_tagline">These are a series of scripts in Javascript  for Photoshop, Python scripts and macros in ImageJ to estimate the number of immuno-reactive Prox1 cells in the hilus of the dentate gyrus of the hippocampus in mice</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="-hilar-prox1-cells-quantification" class="anchor" href="#-hilar-prox1-cells-quantification"><span class="octicon octicon-link"></span></a> Hilar-Prox1-Cells-Quantification</h1>
+
+<hr><p>These are a series of scripts in Javascript  for Photoshop, Python scripts and macros in ImageJ to estimate the number of immuno-reactive Prox1 cells in the hilus of the dentate gyrus of the hippocampus in mice</p>
+
+<h1></h1>
+
+<p>The scripts can be used individually . But these are the steps to quantify Prox1 cells in the hilus</p>
+
+<p>The first step is to perform Immunohistochemistry for Prox1 in free floating brain sections as explained in Myers et al 2013. Then sections need to be  dehydrated an coverslipped in permount and photographed with a brightfield microscope and digital camera.Photographs need to be taken at a 20X magnification.</p>
+
+<p>For each studied animal you need to create a folder for each section an label each Folder as "Section1","Section2", etc. 
+Take the pictures of each section and save them on the corresponding folder.</p>
+
+<p>For each of the fallowing steps there is a folder with macros and scripts.</p>
+
+<p>1) Photomerge the images by using  the Javascript script from Step1 in Photoshop.</p>
+
+<p>2) After photomerging all the images. Draw the regions of interests(ROI)s as indicated in Step1.5</p>
+
+<p>3) Then proceed to create ROI binary images  from the alpha channels using the Javascript in Step2 called "Fill_All.jsx". 
+In the scripts change the name of the ROIs that you wish to create binary images.To create an ROI that corresposnds to two ROIs uncomment the line that extends the selection.</p>
+
+<p>These steps need to be completed for each animal.</p>
+
+<p>5) After creating the binary images run the ImageJ macro in Step3 and Step4.</p>
+
+<p>6) Then create the thresholded images using an ImageJ macro in Step5.</p>
+
+<p>7) Then create txt files with the number of cells in each section by using the macro in Step6.</p>
+
+<p>8) Orgnaize the count txt data into a csv file using the Python script in Step8.</p>
+
+<p>9) Orgnaize the area txt data into a csv file using the Python script in Step7.</p>
+
+<p>10) Finally orgnize and plot the data of all the animals by using the Python script in Step9.</p>
+
+<p>Note: All the scripts are a work in progress and were written for my use. There might be more than one script in each folder. This may correspond to different ROIs or different groups of animals.
+Example, in these scripts I had the group "P16_P30_P60" and "Cre Bax", and  for ROIs I had "H","Hilus", and "SGZ".</p>
+
+<hr>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Hilar-prox1-cells-quantification maintained by <a href="https://github.com/keriber">keriber</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
