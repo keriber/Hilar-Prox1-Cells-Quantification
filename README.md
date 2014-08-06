@@ -6,9 +6,7 @@ These are a series of scripts in Javascript  for Photoshop, Python scripts and m
 ================================
 The scripts can be used individually . But these are the steps to quantify Prox1 cells in the hilus
  
-The first step is to perform Immunohistochemistry for Prox1 in free floating brain sections as explained in Myers et al 2013. 
-Then sections need to be  dehydrated an coverslipped in permount and photographed with a brightfield microscope and digital camera.
-Photographs need to be taken at a 20X magnification.
+The first step is to perform Immunohistochemistry for Prox1 in free floating brain sections as explained in Myers et al 2013. Then sections need to be  dehydrated an coverslipped in permount and photographed with a brightfield microscope and digital camera.Photographs need to be taken at a 20X magnification.
 
 For each studied animal you need to create a folder for each section an label each Folder as "Section1","Section2", etc. 
 Take the pictures of each section and save them on the corresponding folder.
