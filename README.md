@@ -22,7 +22,7 @@ For each of the fallowing steps there is a folder with macros and scripts.
 3) Then proceed to create ROI binary images  from the alpha channels using the Javascript in Step2 called "Fill_All.jsx". 
 In the scripts change the name of the ROIs that you wish to create binary images.To create an ROI that corresposnds to two ROIs uncomment the line that extends the selection.
 
-4) These steps need to be completed for each animal.
+ These steps need to be completed for each animal.
 
 5) After creating the binary images run the ImageJ macro in Step3 and Step4.
 
