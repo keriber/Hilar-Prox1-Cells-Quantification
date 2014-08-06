@@ -15,24 +15,24 @@ Take the pictures of each section and save them on the corresponding folder.
 
 For each of the fallowing steps there is a folder with macros and scripts.
 
-1)Photomerge the images by using  the Javascript script from Step1 in Photoshop.
+1) Photomerge the images by using  the Javascript script from Step1 in Photoshop.
 
-2)After photomerging all the images. Draw the regions of interests(ROI)s as indicated in Step1.5
+2) After photomerging all the images. Draw the regions of interests(ROI)s as indicated in Step1.5
 
-3)Then proceed to create ROI binary images  from the alpha channels using the Javascript in Step2 called "Fill_All.jsx". 
+3) Then proceed to create ROI binary images  from the alpha channels using the Javascript in Step2 called "Fill_All.jsx". 
 In the scripts change the name of the ROIs that you wish to create binary images.To create an ROI that corresposnds to two ROIs uncomment the line that extends the selection.
 
-4)These steps need to be completed for each animal.
+4) These steps need to be completed for each animal.
 
-5)After creating the binary images run the ImageJ macro in Step3 and Step4.
+5) After creating the binary images run the ImageJ macro in Step3 and Step4.
 
-6)Then create the thresholded images using an ImageJ macro in Step5.
+6) Then create the thresholded images using an ImageJ macro in Step5.
 
-7)Then create txt files with the number of cells in each section by using the macro in Step6.
+7) Then create txt files with the number of cells in each section by using the macro in Step6.
 
-8)Orgnaize the count txt data into a csv file using the Python script in Step8.
+8) Orgnaize the count txt data into a csv file using the Python script in Step8.
 
-9)Orgnaize the area txt data into a csv file using the Python script in Step7.
+9) Orgnaize the area txt data into a csv file using the Python script in Step7.
 
 10) Finally orgnize and plot the data of all the animals by using the Python script in Step9.
 
