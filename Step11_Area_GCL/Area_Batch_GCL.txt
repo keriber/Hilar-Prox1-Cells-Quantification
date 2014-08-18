@@ -1,0 +1,28 @@
+macro "AreaBatch"{
+roiManager("reset");
+run("Clear Results");
+run("Set Measurements...", "area display redirect=None decimal=3")
+dir = getDirectory("");
+list = getFileList(dir);
+for (i=0; i <list.length;i++){
+    if (endsWith(list[i], ".tif")){
+        open(dir+list[i]);
+        run("8-bit");
+        run("Make Binary");
+        run("Set Scale...", "distance=27 known=10 pixel=1 unit=micm global"); //Setting Scale
+        run("Analyze Particles...", "size=1000-Infinity circularity=0.00-1.00 show=Nothing display add");
+        }
+
+}
+dir1 = getDirectory("image");
+dir2 = "F:/Backup Seagate Hardrive/Quantification_C57_SW/Quantification_Default_GCL_H/GCL_CSVs/"
+name = File.getName(dir1);
+roiManager("Save",  dir1+name+"_GCL"+".zip");
+saveAs("Results",  dir1+name+"_GCL"+".txt");
+saveAs("Results",  dir2+name+"_GCL"+".txt");
+roiManager("reset");
+run("Images to Stack", "method=[Copy (top-left)] name=Stack title=[] use");
+run("Set Scale...", "distance=27 known=10 pixel=1 unit=micm global"); //Setting Scale
+run("Analyze Particles...", "size=1000-Infinity circularity=0.00-1.00 show=Nothing display add stack");
+roiManager("Save",  dir1+name+"_stack"+"_GCL"+".zip");
+}
