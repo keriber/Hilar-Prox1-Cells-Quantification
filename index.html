@@ -41,11 +41,22 @@
 <hr>
 <h3>Immunohistochemistry</h3>
           <p>The first step is to perform Immunohistochemistry for Prox1 in free floating brain sections as explained in <a href="http://www.ncbi.nlm.nih.gov/pubmed/23840835">Myers et al 2013</a>. Then sections need to be  dehydrated an coverslipped in permount and photographed with a brightfield microscope and digital camera.Photographs need to be taken at a 20X magnification.</p>
-<hr>
+<figure>
+  <img src ="images/sw.png" >
+  <figcaption>Fig.1 - Prox1 immunohistochemsitry from a mouse hippocampal section .</figcaption>
+</figure>
+          
+          
+          <hr>
 <h3>Folder Structure</h3>
           <p>For each animal you need to create a folder for each section and label each as "Section1","Section2", etc. 
 Take the pictures of each section and save them on the corresponding folder.</p>
-<hr>
+<figure>
+  <img src ="images/folder_pic.png" >
+  <figcaption>Fig. 2 - Folders</figcaption>
+</figure>
+          
+          <hr>
 <h3>Scripts</h3>
           <p>For each of the fallowing steps there is a folder with macros and scripts.</p>
           <p>Note: These steps need to be completed for each animal.</p>
@@ -54,11 +65,25 @@ Take the pictures of each section and save them on the corresponding folder.</p>
           <ol>
         
 
-              <li> Photomerge the images by using  the JavaScript script from <a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step1_Photomerge/BatchMergeKB.jsx">Step1</a> in Photoshop.</li>  
+              <li> Photomerge the images by using  the JavaScript script from <a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step1_Photomerge/BatchMergeKB.jsx">Step1</a> in Photoshop.After photomerging make sure the sections are in order and make sure to add the label each section with a number that corresponds to the position of each section.
+                <figure>
+                    <img src ="images/sections.png" >
+                    <figcaption>Fig. 3 - Sections</figcaption>
+                </figure>
+              </li>  
+              
     
-              <li> After photomerging all the images. Draw the regions of interests(ROI)s as indicated in <a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step_1.5/ROI_drawing.txt">Step1.5</a>.</li>
+              <li> After photomerging all the images. Draw the regions of interests(ROI)s as indicated in <a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step_1.5/ROI_drawing.txt">Step1.5</a>.
+                <figure>
+                      <img src ="images/gcl.png" >
+                      <figcaption>Fig. 4 - Example of the GCL region of interest.</figcaption>
+                </figure>
+                <figure>
+                    <img src ="images/hilus.png" >
+                    <figcaption>Fig. 5 - Example of the Hilus region of interest.</figcaption>
+                </figure></li>
         
-              <li> Then proceed to create ROI binary images  from the alpha channels using the Javascript in <a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step2_Create_Masks/FillAll_version2.jsx">Step2</a> called "Fill_All.jsx". 
+              <li> Then proceed to create ROI binary images  from the alpha channels using the JavaScript in <a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step2_Create_Masks/FillAll_version2.jsx">Step2</a> called "Fill_All.jsx". 
                   
 In the scripts change the name of the ROIs that you wish to create binary images. To create an ROI that corresponds to two ROIs uncomment the line that extends the selection.</li>
         
