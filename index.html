@@ -43,37 +43,40 @@
           <p>The first step is to perform Immunohistochemistry for Prox1 in free floating brain sections as explained in <a href="http://www.ncbi.nlm.nih.gov/pubmed/23840835">Myers et al 2013</a>. Then sections need to be  dehydrated an coverslipped in permount and photographed with a brightfield microscope and digital camera.Photographs need to be taken at a 20X magnification.</p>
 <hr>
 <h3>Folder Structure</h3>
-<p>For each animal you need to create a folder for each section and label each as "Section1","Section2", etc. 
+          <p>For each animal you need to create a folder for each section and label each as "Section1","Section2", etc. 
 Take the pictures of each section and save them on the corresponding folder.</p>
 <hr>
 <h3>Scripts</h3>
-<p>For each of the fallowing steps there is a folder with macros and scripts.</p>
-<p>Note: These steps need to be completed for each animal.</p>
+          <p>For each of the fallowing steps there is a folder with macros and scripts.</p>
+          <p>Note: These steps need to be completed for each animal.</p>
 
 
-<ol>
+          <ol>
         
 
-<li> Photomerge the images by using  the JavaScript script from Step1 in Photoshop.</li>        
-<li> After photomerging all the images. Draw the regions of interests(ROI)s as indicated in Step1.5</li>
+              <li> Photomerge the images by using  the JavaScript script from <a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step1_Photomerge/BatchMergeKB.jsx">Step1</a> in Photoshop.</li>  
+    
+              <li> After photomerging all the images. Draw the regions of interests(ROI)s as indicated in <a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step_1.5/ROI_drawing.txt">Step1.5</a>.</li>
         
-<li> Then proceed to create ROI binary images  from the alpha channels using the Javascript in Step2 called "Fill_All.jsx". 
-In the scripts change the name of the ROIs that you wish to create binary images. To create an ROI that corresposnds to two ROIs uncomment the line that extends the selection.</li>
+              <li> Then proceed to create ROI binary images  from the alpha channels using the Javascript in <a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step2_Create_Masks/FillAll_version2.jsx">Step2</a> called "Fill_All.jsx". 
+                  
+In the scripts change the name of the ROIs that you wish to create binary images. To create an ROI that corresponds to two ROIs uncomment the line that extends the selection.</li>
         
-<li> After creating the binary images run the ImageJ macro in Step3 and Step4.</li>
+              <li> After creating the binary images run the ImageJ macro in <a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step3_Create_GCL_H_ROI/Area_Batch_GCL_H.txt">Step3</a>and<a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step4_Create_Hlus_ROI/Area_Batch_Hilus.txt">Step4</a> </li>
 
-<li> Then create the thresholded images using an ImageJ macro in Step5.</li>
+              <li> Then create the thresholded images using an ImageJ macro in <a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step5_Create_Threholded_Images/Creating_Threshold.txt">Step5</a>.</li>
 
-<li> Then create txt files with the number of cells in each section by using the macro in Step6.</li>
+              <li> Then create txt files with the number of cells in each section by using the macro in <a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step6_Create_Count/NumberofEGCsBatch3.txt">Step6</a>.</li>
 
-<li> Orgnaize the count txt data into a csv file using the Python script in Step8.</li>
+              <li> Orgnaize the count txt data into a csv file using the Python script in<a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step8_Count_CSV/Create_Count_CSV_Hilus_P30_P60.py">Step8</a>.</li>
 
-<li> Orgnaize the area txt data into a csv file using the Python script in Step7</li>
-
-<li> Finally, orgnize and plot the data of all the animals by using the Python script in Step9.</li> 
-</ol>
+              <li> Orgnaize the area txt data into a csv file using the Python script in <a href="https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step7_Area_CSV/Strains/Creat_Hilar_Area_P16_P30_P60.py">Step7</a>.</li>
+              
+              <li> Finally, orgnize and plot the data of all the animals by using the Python script in <a href= "https://github.com/keriber/Hilar-Prox1-Cells-Quantification/blob/master/Step9_Read_CSVs_Figures/Read_CSVs_C_H_P16_P30_P60_H.py">Step9</a>.</li> 
+          </ol>
 <hr>            
-<p>Note: All the scripts are a work in progress and were written for my use. There might be more than one script in each folder. This may correspond to different ROIs or different groups of animals.
+
+          <p>Note: All the scripts are a work in progress and were written for my use. There might be more than one script in each folder. This may correspond to different ROIs or different groups of animals.
 Example, in these scripts I had the group "P16_P30_P60" and "Cre Bax", and  for ROIs I had "H","Hilus", and "SGZ".</p>
 
           
@@ -86,6 +89,7 @@ Example, in these scripts I had the group "P16_P30_P60" and "Cre Bax", and  for 
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         <p class="copyright">Hilar-prox1-cells-quantification maintained by <a href="https://github.com/keriber">keriber</a></p>
+          <p>Contact: keria.bermudez@gmail.com</p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
