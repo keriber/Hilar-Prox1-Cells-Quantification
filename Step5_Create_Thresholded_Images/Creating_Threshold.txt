@@ -1,6 +1,8 @@
 macro "CreatingThreshold"{
 
-dir = getDirectory("");
+dir = getDirectory("Select Directory with Images");
+dir1 = getDirectory("Select Directory to Save Thresholded Images");
+
 list = getFileList(dir);
 for (i=0; i <list.length;i++){
     if (endsWith(list[i], ".zip"))
@@ -20,9 +22,9 @@ for (i=0; i <list.length;i++){
         setOption("BlackBackground", true);
         run("Convert to Mask");
         resetThreshold();
-        dir1 = getDirectory("image");
+        //dir1 = getDirectory("image");
         name = getInfo("image.filename");
-        saveAs("tiff", dir1+"Default/"+name);
+        saveAs("tiff", dir1+"/"+name);
         }
 }
 }
