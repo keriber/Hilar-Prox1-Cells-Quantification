@@ -1,0 +1,43 @@
+  
+ macro "AreaBatch"{
+ ROI = "Untitled";
+  pixels=27; microns=10;
+  Dialog.create("Create ROIs");
+  Dialog.addString("Region of Interest Name:", "_H_GCL");
+  Dialog.addMessage("Setting the Scale");
+  Dialog.addNumber("Distance in pixels:", 27);
+  Dialog.addNumber("Distance in microns:", 10);
+  Dialog.show();
+  ROI = Dialog.getString();
+  pixels = Dialog.getNumber();
+  microns = Dialog.getNumber();
+  print(pixels);
+  print(microns);
+  print(ROI);
+
+roiManager("reset");
+run("Clear Results");
+run("Set Measurements...", "area display redirect=None decimal=3")
+dir = getDirectory("Select Directory with Binary Images");
+dir1 = getDirectory("Select Directory where you want to save the ROI and txt file");
+
+list = getFileList(dir);
+for (i=0; i <list.length;i++){
+    if (endsWith(list[i], ".tif")){
+        open(dir+list[i]);
+        run("8-bit");
+        run("Make Binary");
+        run("Set Scale...", "distance=pixels known=microns pixel=1 unit=micm global"); //Setting Scale
+        run("Analyze Particles...", "size=1000-Infinity circularity=0.00-1.00 show=Nothing display add");
+        }
+
+}
+name = File.getName(dir);
+roiManager("Save",  dir1+name+ROI+".zip");
+saveAs("Results",  dir1+name+ROI+".txt");
+roiManager("reset");
+run("Images to Stack", "method=[Copy (top-left)] name=Stack title=[] use");
+run("Set Scale...", "distance=pixels known=microns pixel=1 unit=micm global"); //Setting Scale
+run("Analyze Particles...", "size=1000-Infinity circularity=0.00-1.00 show=Nothing display add stack");
+roiManager("Save",  dir1+name+"_stack"+ROI+".zip");
+}
