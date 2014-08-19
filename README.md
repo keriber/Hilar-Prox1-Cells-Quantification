@@ -5,7 +5,8 @@ These are a series of scripts in Javascript  for Photoshop, Python scripts and m
 
 ================================
 The scripts can be used individually .You can go ahead and copy or contribute to any of the scripts.
-
+For further information go to 
+http://keriber.github.io/Hilar-Prox1-Cells-Quantification/
 ================================
 
 Note: All the scripts are a work in progress and were written for my use. There might be more than one script in each folder. This may correspond to different ROIs or different groups of animals.
