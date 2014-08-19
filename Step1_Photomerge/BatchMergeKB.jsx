@@ -1,4 +1,5 @@
-﻿var workFolder = Folder("Z:/Bermudez-Hernandez/Strains Project/Animals/C57_20/Prox1_NeuN/Slide2");
+﻿//This will be the direcotry of the images
+var workFolder = Folder("Z:/Bermudez-Hernandez/Strains Project/Animals/C57_20/Prox1_NeuN/Slide2");
 var folders = workFolder.getFiles(); 
 runphotomergeFromScript = true;
 //runphotomergeFromScript = true;
