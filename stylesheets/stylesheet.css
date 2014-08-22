@@ -36,7 +36,8 @@ footer, header, hgroup, menu, nav, section {
 }
 
 ol, ul {
-  list-style: none;
+	list-style: none;
+	font-size: medium;
 }
 
 table {
@@ -206,8 +207,9 @@ ul {
 }
 
 ol {
-  list-style: decimal inside;
-  padding-left: 20px;
+	list-style-type: decimal;
+	list-style-position: outside;
+	padding-left: 20px;
 }
 
 dl dt {
@@ -365,6 +367,11 @@ Full-Width Styles
 #footer_wrap {
   background: #212121;
 }
+figure {
+	text-align: center;
+	font-size: small;
+}
+
 
 
 
