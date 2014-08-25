@@ -68,8 +68,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 36px;
-  font-weight: 700;
+	font-size: 36px;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 h2 {
@@ -79,7 +80,8 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+	font-size: 24px;
+	text-transform: uppercase;
 }
 
 h4 {
@@ -135,18 +137,18 @@ strong {
 }
 
 img {
-  position: relative;
-  margin: 0 auto;
-  max-width: 739px;
-  padding: 5px;
-  margin: 10px 0 10px 0;
-  border: 1px solid #ebebeb;
-
-  box-shadow: 0 0 5px #ebebeb;
-  -webkit-box-shadow: 0 0 5px #ebebeb;
-  -moz-box-shadow: 0 0 5px #ebebeb;
-  -o-box-shadow: 0 0 5px #ebebeb;
-  -ms-box-shadow: 0 0 5px #ebebeb;
+	position: relative;
+	margin: 0 auto;
+	max-width: 500px;
+	padding: 5px;
+	margin: 10px 0 10px 0;
+	border: 1px solid #ebebeb;
+	box-shadow: 0 0 5px #ebebeb;
+	-webkit-box-shadow: 0 0 5px #ebebeb;
+	-moz-box-shadow: 0 0 5px #ebebeb;
+	-o-box-shadow: 0 0 5px #ebebeb;
+	-ms-box-shadow: 0 0 5px #ebebeb;
+	min-width: 0px;
 }
 
 p img {
@@ -300,11 +302,12 @@ Full-Width Styles
 }
 
 #project_title {
-  margin: 0;
-  color: #fff;
-  font-size: 42px;
-  font-weight: 700;
-  text-shadow: #111 0px 0px 10px;
+	margin: 0;
+	color: #fff;
+	font-size: 42px;
+	font-weight: 700;
+	text-shadow: #111 0px 0px 10px;
+	text-transform: uppercase;
 }
 
 #project_tagline {
@@ -371,6 +374,10 @@ figure {
 	text-align: center;
 	font-size: small;
 }
+li figure img {
+	max-width: 500px;
+}
+
 
 
 
