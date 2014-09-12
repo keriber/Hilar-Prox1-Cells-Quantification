@@ -1,7 +1,7 @@
 Hilar-Prox1-Cells-Quantification
 ================================
 
-These are a series of scripts in Javascript  for Photoshop, Python scripts and macros in ImageJ to estimate the number of immuno-reactive Prox1 cells in the hilus of the dentate gyrus of the hippocampus in mice
+These are a series of scripts in JavaScript  for Photoshop, Python scripts and macros in ImageJ to estimate the number of immuno-reactive Prox1 cells in the hilus of the dentate gyrus of the hippocampus in mice
 
 ================================
 The scripts can be used individually .You can go ahead and copy or contribute to any of the scripts.
