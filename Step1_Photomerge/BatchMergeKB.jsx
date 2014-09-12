@@ -46,17 +46,3 @@ for( var i = 0; i < folders.length; i++ )
     activeDocument.close( SaveOptions.DONOTSAVECHANGES ); 
      }
 }
- 
-/*function savePSB(fileNameAndPath)
-{
-	function cTID(s) { return app.charIDToTypeID(s); };
-	function sTID(s) { return app.stringIDToTypeID(s); };
-
-	var desc19 = new ActionDescriptor();
-     var desc20 = new ActionDescriptor();
-	desc20.putBoolean( sTID('maximizeCompatibility'), true );
-	desc19.putObject( cTID('As  '), cTID('Pht8'), desc20 );
-    desc19.putPath( cTID('In  '), new File( fileNameAndPath ) );
-    desc19.putBoolean( cTID('LwCs'), true );
-    executeAction( cTID('save'), desc19, DialogModes.NO );
-};*/
